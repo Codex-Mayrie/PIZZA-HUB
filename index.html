@@ -1,40 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link href="js/bootstrap.js" type="text/js" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Sofia"
-      rel="stylesheet"
-    />
-    <title>PIZZA HUB</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="css/bootstrap.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="js/bootstrap.js" type="text/js" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet" />
+  <title>PIZZA HUB</title>
+</head>
+
+<body>
+
+  <div class="container-fluid">
     <div class="home">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6">
-            <h1 id="bg-primary">PIZZA HUB</h1>
-            <p>
-              <span id="bg-info"
-                >Want some delicious Pizza? Then, Pizza hub got you covered!<br />Our
-                shop is the awesome place to visit when it comes to this.<br />Starting
-                from our location,convenience of delivery and our able team.
-                <br />We are just one call away!</span
-              >
-            </p>
-            <a href="#form"
-              ><button class="btn btn-primary">Place your order now!</button></a
-            >
+      <div class="row">
+        <div class="col-md-6">
+          <h1 id="heading">PIZZA HUB</h1>
+          <p>
+            <span id="welcome">Want some delicious Pizza? Then, Pizza hub got you covered!.<br>We are just one call away!</span>
+          </p>
+          <a href="#form"><button class="btn btn-primary">Place your order now!</button></a>
+        </div>
+      </div>
+    </div>
+
+    
+    <div id="we">
+        <h1 class="text-info">About us</h1>
+        <div class="row pt-4">
+      <div class="col-md-4">
+        <img src="images/pizza-340.png" width="400px" height="400px">
+      </div>
+      <div class="col-md-8">
+        <p class="text-justify">We are a team that is dedicated to excellence in terms of quality of our Pizzas.<br> We value our customers
+          and we are always there to ensure that we give our best and maintain a good reputation to the outside world.
+          After just one bite, you’ll surely love our products.</p>
+    </div>
+  </div>
+    </div>
+    <div class="container-fluid">
+      <h1 class="text-info">A Taste of delicacies</h1>
+      <div class="row pt-4">
+        <div class="col-md-3">
+          <div class="card text-center" id="pizza1">
+            <img src="images/pizza03.jpg" class="image-fluid">
+            <h2 class="pizza-heading text-center" id="pizza1-title">STROMBOLI</h2>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center" id="pizza2">
+            <img src="images/pizza04.jpg" class="image-fluid">
+            <h2 class="pizza-heading text-center" id="pizza2-title">NAPOLETANA</h2>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center" id="pizza3">
+            <img src="images/pizza07.jpg" class="image-fluid">
+            <h2 class="pizza-heading text-center" id="pizza3-title">MARINARA</h2>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center" id="pizza4">
+            <img src="images/pizza09.jpg" class="image-fluid">
+            <h2 class="pizza-heading text-center" id="pizza4-title">ITALIANA</h2>
           </div>
         </div>
       </div>
     </div>
+    <div class="container-fluid pt-5 pl-0 pr-0">
+      <footer class="bg-primary p-4 text-white">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, placeat ducimus modi minus dignissimos
+          veritatis labore suscipit tenetur, voluptates consequuntur, voluptas commodi? Ea sunt consequuntur aliquid
+          repellendus fugiat illum asperiores!</p>
+      </footer>
+    </div>
     <script src="./js/jquery-3.4.1.js"></script>
     <script src="./js/script.js"></script>
-  </body>
+</body>
+
 </html>
