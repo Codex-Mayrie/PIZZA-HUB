@@ -25,7 +25,17 @@ $(document).ready(function(){
     $('#pizza4-title').hide("slow");
   });
   
-  $('#order').click(function(){
+  $('#viewCart').click(function(){
+    $('#orderPizza').modal('hide');
+  });
+  $('#addMore').click(function(){
+    $('#cartPizza').modal('hide');
     $('#orderPizza').modal('show');
   });
+  $('#checkout').click(function(){
+    let location = $('#location').val();
+    $('#cartPizza').modal('hide');
+    alert("Your order will be delivered to " + location);
+  });
+
 })
