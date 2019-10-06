@@ -36,6 +36,7 @@ $(document).ready(function(){
     let location = $('#location').val();
     $('#cartPizza').modal('hide');
     alert("Your order will be delivered to " + location);
+   
   });
 
 })
