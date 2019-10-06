@@ -1,3 +1,36 @@
+$(document).ready(function(){
+  $('button#Place your Order').click(function(){
+      var pizzaSize = $('#pizzasize:selected').val();
+      var pizzaCrust = $('#pizzacrust:selected').val();
+
+      var pTopping = [];
+      
+      $.each($("input[for='topping']:checked"), function(){
+          pTopping.push($(this).val());
+      });
+      var pizzaTopping = pTopping.length*80;
+      var pizzaTotal = parseInt(pizzaSize) + parseInt(pizzaCrust)+ parseInt(pizzaTopping);
+      alert("Your total order is: "+pizzaTotal)
+      $('#location').show();
+      event.preventDefault();
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //shows jquery function for menu
 
 $(document).ready(function(){
