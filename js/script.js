@@ -1,11 +1,19 @@
+var crust,toppings,size, price, total;
+function get(size, crust, toppings, total) {
+    this.size = size;
+    this.crust = crust;
+    this.toppings = toppings;
+    this.total = total;
+}
+
 $(document).ready(function(){
   $('button#Place your Order').click(function(){
-      var pizzaSize = $('#pizzasize:selected').val();
-      var pizzaCrust = $('#pizzacrust:selected').val();
+      var pizzaSize = $('#pizzaSize:chosen').val();
+      var pizzaCrust = $('#pizzaCrust:chosen').val();
 
-      var pTopping = [];
+      var pizzaTopping = [];
       
-      $.each($("input[for='topping']:checked"), function(){
+      $.each($("input[for='topping']:chosen"), function(){
           pTopping.push($(this).val());
       });
       var pizzaTopping = pTopping.length*80;
