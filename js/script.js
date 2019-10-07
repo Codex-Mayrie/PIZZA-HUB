@@ -20,8 +20,19 @@ $(document).ready(function () {
     $.each($("input[name='topping']:checked"), function () {
       pizzaTopping.push($(this).val());
     });
-    console.log(pizzaTopping);
-    
+    console.log(pizzaTopping.length);
+
+    var toppingPrice = 0;
+    for (var i = 0; i < pizzaTopping.length; i++) {
+      var unitPrice = parseInt(pizzaTopping[i]);
+      console.log(unitPrice);
+
+      toppingPrice += unitPrice;
+    }
+    console.log(toppingPrice);
+
+    var pizzaTotal = pizzaSize + pizzaCrust + toppingPrice;
+    alert("Your total order is: " + pizzaTotal)
 
   });
 
