@@ -51,22 +51,26 @@
               </div>
               <label for="pizzaTopping">Select Toppings @shs 80</label><br>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="80">
+                <input class="form-check-input" type="checkbox" name="topping" value="80">
                 <label class="form-check-label" for="topping">Pepperoni</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="80">
+                <input class="form-check-input" type="checkbox" name="topping" value="80">
                 <label class="form-check-label" for="topping">Onions</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="80">
+                <input class="form-check-input" type="checkbox" name="topping" value="80">
                 <label class="form-check-label" for="topping">Sausage</label>
               </div>
+
+              <!-- moved for trial -->
+              <button type="submit" class="btn btn-outline-info" id="cart">Add to Cart</button>
+
             </form>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-info" id="cart">Add to Cart</button>
+          <!-- <button type="submit" class="btn btn-outline-info" id="cart">Add to Cart</button> -->
           <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#cartPizza"
             id="viewCart">View
             Cart</button>
@@ -106,7 +110,7 @@
           </table>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-info" data-dismiss="modal" id="addMore">Order More</button>
+          <button type="submit" class="btn btn-outline-info" data-dismiss="modal" id="addMore">Order More</button>
           <button type="button" class="btn btn-outline-primary" id="checkout">Checkout</button>
         </div>
       </div>
@@ -181,8 +185,8 @@
         </div>
       </div>
       <script src="js/jquery-3.4.1.js"></script>
-      <script src="js/bootstrap.js"></script>
       <script src="./js/script.js"></script>
+      <script src="js/bootstrap.js"></script>
 </body>
 
 </html>
