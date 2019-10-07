@@ -63,16 +63,15 @@
                 <label class="form-check-label" for="topping">Sausage</label>
               </div>
 
-              <button type="submit" class="btn btn-outline-info" id="cart">Add to Cart</button>
 
             </form>
+            <div>
+              <button type="button" class="btn btn-outline-info" id="carty">Add to Cart</button>
+              <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#cartPizza"
+                id="viewCart">View
+                Cart</button>
+            </div>
           </div>
-        </div>
-        <div class="modal-footer">
-          <!-- <button type="submit" class="btn btn-outline-info" id="cart">Add to Cart</button> -->
-          <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#cartPizza"
-            id="viewCart">View
-            Cart</button>
         </div>
       </div>
     </div>
@@ -100,15 +99,28 @@
           </form>
 
           <!-- table of orders -->
-          <div class="table">
-          <table style="width:100%" class="pt-5">
-            <tr>
-              <th>Order</th>
-              <th>Quantity</th>
-              <th>Price</th>
-            </tr>
-          </table>
-        </div>
+          <div id="table">
+            <table style="width:100%" class="pt-5">
+              <thead>
+                <tr>
+                  <th>Size</th>
+                  <th>Crust</th>
+                  <th>Toppings</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody id="m_orders">
+                <tr>
+                  <th scope="row"></th>
+                  <td id="Size"></td>
+                  <td id="Crust"></td>
+                  <td id="Toppings"></td>
+                  <td id="Total"></td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
         </div>
         <div class="modal-footer">
           <button type="submit" class="btn btn-outline-info" data-dismiss="modal" id="addMore">Order More</button>
@@ -124,7 +136,7 @@
         <div class="col-md-6">
           <h1>PIZZA HUB</h1>
           <h3 id="welcome" class="p-3">
-            Want some delicious Pizza? Then, Pizza hub got you covewOrder.Namered!. We are just one call
+            Want some delicious Pizza? Then, Pizza hub got you covered!.We are just one call
             away!
           </h3>
           <button id="placeOrder" class="btn btn-outline-info" data-toggle="modal" data-target="#orderPizza">Place your

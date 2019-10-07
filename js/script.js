@@ -7,75 +7,43 @@ function get(size, crust, toppings, total) {
 }
 
 $(document).ready(function () {
-  // trial
   $("form#orders").submit(function (event) {
     event.preventDefault();
 
-    var pizzaSize = parseInt($("select#pizzaSize").val());
+  pizzaSize = parseInt($("select#pizzaSize").val());
+    
     console.log(pizzaSize);
-    var pizzaCrust = parseInt($("select#pizzaCrust").val());
-    console.log(pizzaCrust);
+  pizzaCrust = parseInt($("select#pizzaCrust").val());
+  
 
-    var pizzaTopping = [];
+  pizzaTopping = [];
     $.each($("input[name='topping']:checked"), function () {
       pizzaTopping.push($(this).val());
     });
-    console.log(pizzaTopping.length);
 
-    var toppingPrice = 0;
+
+
+  toppingPrice = 0;
     for (var i = 0; i < pizzaTopping.length; i++) {
-      var unitPrice = parseInt(pizzaTopping[i]);
-      console.log(unitPrice);
+      unitPrice = parseInt(pizzaTopping[i]);
+      
 
       toppingPrice += unitPrice;
     }
-    console.log(toppingPrice);
 
-    var pizzaTotal = pizzaSize + pizzaCrust + toppingPrice;
-    alert("Your total order is: " + pizzaTotal)
+    pizzaTotal = pizzaSize + pizzaCrust + toppingPrice;
+  
 
   });
-
-
-
-
-
-  // $('button#placeOrder').click(function () {
-  //   var pizzaSize = $('#pizzaSize:chosen').val();
-  //   console.log(pizzaSize);
-  //   var pizzaCrust = parseInt$('#pizzaCrust:chosen').val();
-
-  //   var pizzaTopping = [];
-
-  //   $('#cart').click(function () {
-  //     alert(pizzaSize)
-  //   })
-
-  //   $.each($("input[for='topping']:chosen"), function () {
-  //     pTopping.push($(this).val());
-  //   });
-  //   var pizzaTopping = pTopping.length * 80;
-  //   var pizzaTotal = parseInt(pizzaSize) + parseInt(pizzaCrust) + parseInt(pizzaTopping);
-  //   alert("Your total order is: " + pizzaTotal)
-  //   $('#location').show();
-  //   event.preventDefault();
-  // });
+  pizzaTotal = pizzaSize + pizzaCrust + toppingPrice;
+  $('#carty').click(function(){
+    $('#m_orders').append('<tr>'+
+    '<th scope="row">Pizza01 </th>'+
+   ' <td id="></td>'+
+    '<td>23</td>'+
+  '</tr>');
+  });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //shows jquery function for menu
 
