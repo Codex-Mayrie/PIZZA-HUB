@@ -35,14 +35,25 @@ $(document).ready(function () {
   
 
   });
-  pizzaTotal = pizzaSize + pizzaCrust + toppingPrice;
-  $('#carty').click(function(){
-    $('#m_orders').append('<tr>'+
-    '<th scope="row">Pizza01 </th>'+
-   ' <td id="></td>'+
-    '<td>23</td>'+
-  '</tr>');
-  });
+  var size = document.getElementById('size');
+  var crust=document.getElementById('crust');
+  var topping=document.getElementById('toppings');
+  var total = document.getElementById('total');
+
+  size.innerText=large;
+  crust.innerText='';
+  topping.innerText='Pepperoni';
+  total.innerText=9000;
+  // pizzaTotal = pizzaSize + pizzaCrust + toppingPrice;
+  // $('#carty').click(function(){
+  //   $('#m_orders').append('<tr>'+
+  //   '<th scope="row">Pizza01 </th>'+
+  //  ' <td id="Size"></td>'+ $("#Size option:selected").text() +
+  //   '<td id="Crust"></td>'+ $("#Crust option:selected").text() +
+  //   '<td id="Toppings"></td>'+ $("#Toppings option:selected").text() +
+  //   '<td id="Total"></td>'+ $("#Size option:selected").text() +
+  // '</tr>');
+  // });
 });
 
 //shows jquery function for menu
