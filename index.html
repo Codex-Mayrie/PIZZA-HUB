@@ -32,9 +32,9 @@
                   <div class="form-group">
                     <label for="pizzaSize">Select Size</label>
                     <select class="size form-control" id="pizzaSize">
-                      <option label="Large  -2000" value="2000"></option>
-                      <option label="Medium - 1500" value="1500"></option>
-                      <option label="Small- 800" value="800"></option>
+                      <option label="Large  -2000" value=2000></option>
+                      <option label="Medium - 1500" value=1500></option>
+                      <option label="Small- 800" value=800></option>
                     </select>
                   </div>
                 </div>
@@ -51,22 +51,23 @@
               </div>
               <label for="pizzaTopping">Select Toppings @shs 80</label><br>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="topping" value="80">
+                <input class="form-check-input" type="checkbox" name="topping" value=0>
                 <label class="form-check-label" for="topping">Pepperoni</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="topping" value="80">
+                <input class="form-check-input" type="checkbox" name="topping" value=1>
                 <label class="form-check-label" for="topping">Onions</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="topping" value="80">
+                <input class="form-check-input" type="checkbox" name="topping" value=2>
                 <label class="form-check-label" for="topping">Sausage</label>
+                <button type="submit" class="btn btn-outline-info" id="carty">Add to Cart</button>
               </div>
 
 
             </form>
             <div>
-              <button type="button" class="btn btn-outline-info" id="carty">Add to Cart</button>
+
               <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#cartPizza"
                 id="viewCart">View
                 Cart</button>
@@ -101,40 +102,18 @@
           <!-- table of orders -->
           <div id="table">
             <table style="width:100%" class="pt-5">
-              <thead>
-                <tr>
-                  <th>Size</th>
-                  <th>Crust</th>
-                  <th>Toppings</th>
-                  <th>Total</th>
-                </tr>
-              </thead>
-              <tbody id="m_orders">
-                <tr>
-                  <td id="size"></td>
-                  <td id="crust"></td>
-                  <td id="toppings"></td>
-                  <td id="total"></td>
-                </tr>
-              </tbody>
-              <script>
-                // var size = document.getElementById('size');
-                // var crust=document.getElementById('crust');
-                // var topping=document.getElementById('toppings');
-                // var total = document.getElementById('total');
-
-                // size.innerText=230;
-                // crust.innerText='Onions';
-                // topping.innerText='Pepperoni';
-                // total.innerText=9000;
-
-
-              
-              
-              </script>
-                
-            </table>
+            
+              <tr>
+                <th>Size</th>
+                <th>Crust</th>
+                <th>Toppings</th>
+                <th>Total</th>
+               
+              </tr>
+            </table>            
           </div>
+
+
         </div>
         <div class="modal-footer">
           <button type="submit" class="btn btn-outline-info" data-dismiss="modal" id="addMore">Order More</button>

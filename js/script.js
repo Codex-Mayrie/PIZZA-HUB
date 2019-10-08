@@ -7,53 +7,73 @@ function get(size, crust, toppings, total) {
 }
 
 $(document).ready(function () {
-  $("form#orders").submit(function (event) {
+  $("#orders").submit(function (event) {
     event.preventDefault();
 
-  pizzaSize = parseInt($("select#pizzaSize").val());
-    
-    console.log(pizzaSize);
-  pizzaCrust = parseInt($("select#pizzaCrust").val());
-  
+    var totalPrices = [];
+    var grandTotal = 0;
+    var pizzaSize = parseInt($("#pizzaSize").val());
 
-  pizzaTopping = [];
+    console.log(pizzaSize);
+    var pizzaCrust = parseInt($("#pizzaCrust").val());
+    console.log(pizzaCrust);
+
+
+    var pizzaTopping = [];
     $.each($("input[name='topping']:checked"), function () {
-      pizzaTopping.push($(this).val());
+      pizzaTopping.push(parseInt($(this).val()));
     });
 
+    console.log(pizzaTopping);
 
-
-  toppingPrice = 0;
+    var toppingsItems = ["Pepperoni", "Onions", "Sausage"]
+    var subToppings = []
+    var toppingPrice = 0;
+    var totalPrice;
     for (var i = 0; i < pizzaTopping.length; i++) {
-      unitPrice = parseInt(pizzaTopping[i]);
-      
-
-      toppingPrice += unitPrice;
+      subToppings.push(toppingsItems[pizzaTopping[i]]);
+      toppingPrice = subToppings.length * 80;
     }
 
-    pizzaTotal = pizzaSize + pizzaCrust + toppingPrice;
-  
+    console.log(toppingPrice);
+    totalPrice = pizzaSize + pizzaCrust + toppingPrice;
+    console.log(totalPrice);
+
+    totalPrices.push(totalPrice)
+
+    var chosenSize = "";
+    if (pizzaSize === 2000) {
+      chosenSize = "Large"
+    }
+    else if (pizzaSize === 1500) {
+      chosenSize = "Medium"
+    }
+    else {
+      chosenSize = "Small"
+    }
+
+    var chosenCrust = "";
+    if (pizzaCrust === 700) {
+      chosenCrust = "Chicago"
+    }
+    else if (pizzaCrust === 650) {
+      chosenCrust = "Neopoletan"
+    }
+    else {
+      chosenCrust = "Deep-fish"
+    }
+
+
+    $('table').append(`<tr>' +
+        <td id="Size">${chosenSize}</td>
+        <td id="Crust">${chosenCrust}</td>
+       <td id="Toppings">${toppingPrice} </td>
+        <td id="Total">${totalPrice}</td>
+        </tr>`);
 
   });
-  var size = document.getElementById('size');
-  var crust=document.getElementById('crust');
-  var topping=document.getElementById('toppings');
-  var total = document.getElementById('total');
 
-  size.innerText=large;
-  crust.innerText='';
-  topping.innerText='Pepperoni';
-  total.innerText=9000;
-  // pizzaTotal = pizzaSize + pizzaCrust + toppingPrice;
-  // $('#carty').click(function(){
-  //   $('#m_orders').append('<tr>'+
-  //   '<th scope="row">Pizza01 </th>'+
-  //  ' <td id="Size"></td>'+ $("#Size option:selected").text() +
-  //   '<td id="Crust"></td>'+ $("#Crust option:selected").text() +
-  //   '<td id="Toppings"></td>'+ $("#Toppings option:selected").text() +
-  //   '<td id="Total"></td>'+ $("#Size option:selected").text() +
-  // '</tr>');
-  // });
+
 });
 
 //shows jquery function for menu
